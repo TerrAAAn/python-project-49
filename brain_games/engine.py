@@ -9,9 +9,10 @@ def run(game):
     print(game.DESCRIPTION)
     correct_answers = 0
     while correct_answers < 3:
-        question, correct_answer = game.get_question_and_answer()
+        correct_answer = 0
         user_answer = ''
         while user_answer != correct_answer:
+            question, correct_answer = game.get_question_and_answer()
             print(f'Objective: {question}...')
             user_answer = input("Your answer: ")
             if user_answer == correct_answer:
