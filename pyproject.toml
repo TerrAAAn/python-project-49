@@ -13,6 +13,25 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["brain_games"]
 
+[dependency-groups]
+dev = [
+    "ruff>=0.15.7",
+]
+
 [project.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
+
+[tool.ruff]
+exclude = [".git", "__pycache__", "build", "dist"]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "C90"]
+ignore = ["E501"]
+
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.isort]
+known-first-party = ["brain_games"]
