@@ -1,7 +1,7 @@
 import math
 from random import randint
 
-DESCRIPTION = "Let's find the GCD between two numbers"  
+DESCRIPTION = "Let's find the GCD between two numbers"
 
 def get_question_and_answer():
     number_1, number_2 = randint(0, 100), randint(0, 100)
