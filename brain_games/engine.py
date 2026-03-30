@@ -20,5 +20,5 @@ def run(game):
                 correct_answers += 1
                 break
             else:
-                print(f'{user_answer} is wrong answer... Try again!')
+                print(f'{user_answer} is wrong answer... correct is {correct_answer}')
     print(f"Congratulations, {name}!")
